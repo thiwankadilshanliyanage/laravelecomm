@@ -1,6 +1,9 @@
-<div class="panel panel-content">
-    <div class="panel-body">
-        Panel content 
+<footer class="bg-light text-center text-lg-start">
+    <div class="p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+       Panel content
     </div>
-    <div class="panel-footer">Panel footer</div>
-</div>
+    <div class="p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+       Panel-footer
+    </div>
+
+</footer>
