@@ -1,6 +1,6 @@
 @extends('master')
 @section("content")
-<div class="container custom-product">
+<div class="custom-product">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             @foreach ($products as $item)
@@ -21,6 +21,18 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+
+    <div class="trendig-wrapper">
+        <h3>Trending Products</h3>
+        @foreach($products as $item)
+        <div class="trending-item">
+          <img class="trending-img" src="{{$item['gallery']}}">
+          <div class="">
+            <h3>{{$item['name']}}</h3>
+          </div>  
+        </div>
+        @endforeach
     </div>
 </div>
 @endsection
