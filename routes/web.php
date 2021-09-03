@@ -20,3 +20,4 @@ Route::get('/login', function () {
 
 Route::post("/login",[UserController::class,'login']);
 Route::get("/", [productController::class, 'index']);
+Route::get("detail/{id}", [productController::class, 'detail']);

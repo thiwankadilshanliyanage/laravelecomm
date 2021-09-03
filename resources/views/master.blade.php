@@ -41,8 +41,12 @@
         width: 20%;
     }
 
-    .trendig-wrapper{
+    .trendig-wrapper {
         margin: 30px;
+    }
+
+    .detail-img {
+        height: 200px;
     }
 </style>
 
