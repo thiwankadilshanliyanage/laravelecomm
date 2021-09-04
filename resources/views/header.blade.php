@@ -1,6 +1,13 @@
 <?php
+
 use App\Http\Controllers\productController;
-$total = productController::cartItem();
+use Illuminate\Support\Facades\Session;
+
+$total = 0;
+if (Session::has('user')) {
+    $total = productController::cartItem();
+}
+
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,6 +31,21 @@ $total = productController::cartItem();
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="nav-link" href="#">Cart({{$total}})</a></li>
+                @if(Session::has('user'))
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{Session::get('user')['name']}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                       
+                    </ul>
+                    @else
+                    <li><a class="nav-link" href="/login">Login</a></li>
+                    @endif
+                </div>
+            </ul>
+            </li>
             </ul>
         </div>
     </div>
