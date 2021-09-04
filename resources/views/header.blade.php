@@ -1,3 +1,8 @@
+<?php
+use App\Http\Controllers\productController;
+$total = productController::cartItem();
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Ecomm</a>
@@ -18,7 +23,7 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="nav-link" href="#">Cart(0)</a></li>
+                <li><a class="nav-link" href="#">Cart({{$total}})</a></li>
             </ul>
         </div>
     </div>
