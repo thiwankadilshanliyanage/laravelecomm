@@ -28,7 +28,7 @@
             @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Your address</label>
-                    <textarea class="form-control" placeholder="Enter Your Address"></textarea>
+                    <textarea name="address" class="form-control" placeholder="Enter Your Address"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Payment Method</label><br><br>
