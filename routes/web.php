@@ -26,8 +26,9 @@ Route::get('/logout', function () {
     return redirect('login');
 });
 
-
+Route::view('/register','register');
 Route::post("/login",[UserController::class,'login']);
+Route::post("/register", [UserController::class, 'register']);
 Route::get("/", [productController::class, 'index']);
 Route::get("detail/{id}", [productController::class, 'detail']);
 Route::get("search",[productController::class,'search']);
